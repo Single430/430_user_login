@@ -8,10 +8,10 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">1: 首先我们需要建立一个工程，前提是你已经安装了Django and Python，使用如下命令创建：</span>
 </p>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;django-admin startproject mylogin
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 0, 0);">django-admin startproject mylogin</span>
 </p>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">2: OK，这样你就在当前路径下创建了mylogin，其结构如下，使用 tree mylogin 查看：</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">2: OK，这样你就在当前路径下创建了mylogin，其结构如下，使用 <span style="color: rgb(255, 0, 0);">tree mylogin </span>查看：</span>
 </p>
 <p>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mylogin/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── manage.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── mylogin<br/>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── __init__.py<br/>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── settings.py<br/>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── urls.py<br/>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── wsgi.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 directory, 5 files
@@ -20,44 +20,99 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">3: 接下来我们来创建app，对就是app，只不过我们这样创建：</span>
 </p>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd mylogin
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 0, 0);">&nbsp;cd mylogin</span>
 </p>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python manage.py startapp online
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 0, 0);">python manage.py startapp online</span>
 </p>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">&nbsp;4:&nbsp; 恩的，来看下online目录结构 tree online：</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">&nbsp;4:&nbsp; 恩的，来看下online目录结构<span style="color: rgb(255, 0, 0);"> tree online</span>：</span>
 </p>
 <p>
     <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 0, 0);">online/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── admin.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── apps.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── migrations<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp; └── __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── models.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── tests.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── views.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 directory, 7 files</span></span>
 </p>
 <p>
-    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5: 上面的步骤结束后，请确保你是跟我一样的，然后我们打来 mylogin/settings.py&nbsp; 添加一些东西：&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5: 上面的步骤结束后，请确保你是跟我一样的，然后我们打来 <span style="color: rgb(255, 0, 0);">mylogin/settings.py</span>&nbsp; 添加一些东西：&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span>
 </p>
-<pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            INSTALLED_APPS = [                &#39;django.contrib.admin&#39;,                &#39;django.contrib.auth&#39;,                &#39;django.contrib.contenttypes&#39;,                &#39;django.contrib.sessions&#39;,                &#39;django.contrib.messages&#39;,                &#39;django.contrib.staticfiles&#39;,                &#39;online&#39;,    # 对就是添加的这个            ]</pre>
+<pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            INSTALLED_APPS = [                
+                                    &#39;django.contrib.admin&#39;,
+                                    &#39;django.contrib.auth&#39;,
+                                    &#39;django.contrib.contenttypes&#39;,                
+                                    &#39;django.contrib.sessions&#39;,                
+                                    &#39;django.contrib.messages&#39;,                
+                                    &#39;django.contrib.staticfiles&#39;,                
+                                    &#39;online&#39;,    # 对就是添加的这个            
+                                    ]</pre>
 <p>
-    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6: 这里我们提前加入一些东西，还是在settings.py中：</span>
+    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6: 这里我们提前加入一些东西，还是在<span style="color: rgb(255, 0, 0);">settings.py</span>中：</span>
 </p>
 <p>
-    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先在你的online文件夹下新建文件夹templates：mkdir&nbsp; templates</span>
+    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先在你的online文件夹下新建文件夹templates：<span style="color: rgb(255, 0, 0);">mkdir&nbsp; templates</span></span>
 </p>
 <p>
-    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后在templates目录下新建三个html文件：account.html 内容如下：</span>
+    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后在<span style="color: rgb(255, 0, 0);">templates</span>目录下新建三个html文件：</span>
 </p>
-<pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:12px">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;注册&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;注册页面：&lt;/h1&gt;&lt;form method = &#39;post&#39; enctype=&quot;multipart/form-data&quot;&gt;    {% csrf_token %}    {{uf.as_p}}    &lt;input type=&quot;submit&quot; value = &quot;注 册&quot; /&gt;    {% if success_message %}&lt;p&gt;&lt;strong style=&quot;color: red&quot;&gt;{{ success_message }}&lt;/strong&gt;&lt;/p&gt;{% endif %}&lt;/form&gt;&lt;br&gt;&lt;a href=&quot;{% url &#39;online:mylogin&#39; %}&quot;&gt;登 陆&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;            index.html:          &lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;登录成功&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;welcome {{username}} !&lt;/h1&gt;&lt;br&gt;&lt;a href=&quot;{% url &#39;online:logout&#39; %}&quot;&gt;注 销&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;            login.html:            &lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;登录&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;登陆页面：&lt;/h1&gt;{% if success_message %}&lt;p&gt;&lt;strong style=&quot;color: red&quot;&gt;{{ success_message }}&lt;/strong&gt;&lt;/p&gt;{% endif %}&lt;form method = &#39;post&#39; enctype=&quot;multipart/form-data&quot;&gt;    {% csrf_token %}    {{uf.as_p}}    &lt;input type=&quot;submit&quot; value = &quot;登 录&quot; /&gt;&lt;/form&gt;&lt;br&gt;&lt;a href=&quot;{% url &#39;online:account&#39; %}&quot;&gt;注 册&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;            settings.py：</pre>
+<p>
+    <span style="color: rgb(0, 176, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 0, 0);">account.html：</span></span>
+</p>
+<pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:12px">            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;    
+            &lt;meta charset=&quot;UTF-8&quot;&gt;    
+            &lt;title&gt;注册&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;h1&gt;注册页面：&lt;/h1&gt;
+            &lt;form method = &#39;post&#39; enctype=&quot;multipart/form-data&quot;&gt;    
+            {% csrf_token %}    
+            {{uf.as_p}}    
+            &lt;input type=&quot;submit&quot; value = &quot;注 册&quot; /&gt;    
+            {% if success_message %}&lt;p&gt;&lt;strong style=&quot;color: red&quot;&gt;{{ success_message }}&lt;/strong&gt;&lt;/p&gt;{% endif %}
+            &lt;/form&gt;&lt;br&gt;&lt;a href=&quot;{% url &#39;online:mylogin&#39; %}&quot;&gt;登 陆&lt;/a&gt;
+            &lt;/body&gt;&lt;/html&gt;
+            
+                  
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;    
+            &lt;meta charset=&quot;UTF-8&quot;&gt;    
+            &lt;title&gt;登录成功&lt;/title&gt;
+            &lt;/head&gt;&lt;body&gt;
+            &lt;h1&gt;welcome {{username}} !&lt;/h1&gt;&lt;br&gt;
+            &lt;a href=&quot;{% url &#39;online:logout&#39; %}&quot;&gt;注 销&lt;/a&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;       
+                 
+                      
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;    
+            &lt;meta charset=&quot;UTF-8&quot;&gt;   
+             &lt;title&gt;登录&lt;/title&gt;
+             &lt;/head&gt;
+             &lt;body&gt;
+             &lt;h1&gt;登陆页面：&lt;/h1&gt;
+             {% if success_message %}&lt;p&gt;&lt;strong style=&quot;color: red&quot;&gt;{{ success_message }}&lt;/strong&gt;&lt;/p&gt;{% endif %}
+             &lt;form method = &#39;post&#39; enctype=&quot;multipart/form-data&quot;&gt;    
+             {% csrf_token %}    
+             {{uf.as_p}}    
+             &lt;input type=&quot;submit&quot; value = &quot;登 录&quot; /&gt;&lt;/form&gt;&lt;br&gt;
+             &lt;a href=&quot;{% url &#39;online:account&#39; %}&quot;&gt;注 册&lt;/a&gt;
+             &lt;/body&gt;
+             &lt;/html&gt;</pre>
 <pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            TEMPLATES = [
                 {
                     &#39;BACKEND&#39;: &#39;django.template.backends.django.DjangoTemplates&#39;,
                     &#39;DIRS&#39;: [os.path.join(BASE_DIR), &#39;online/templates&#39;],    # 这里，这是将你的模板引进来
                     ....</pre>
 <p>
-    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">&nbsp;7: 这里我们不动数据库的选项，默认使用sqlite3数据库，等会我们需要生成数据库，名字是db.sqlite3，在同manage.py同路径下的目录中;</span>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">&nbsp;7: 这里我们不动数据库的选项，默认使用sqlite3数据库，等会我们需要生成数据库，名字是<span style="color: rgb(255, 0, 0);">db.sqlite3，在同manage.py同路径下的目录中</span>;</span>
 </p>
 <p>
     <br/>
 </p>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">8:&nbsp; 打开mylogin目录下的urls.py，改成这个样子：</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">8:&nbsp; 打开<span style="color: rgb(255, 0, 0);">mylogin目录下的urls.py</span>，改成这个样子：</span>
 </p>
 <pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            from django.conf.urls import url, include
             from django.contrib import admin
@@ -67,7 +122,7 @@
                 url(r&#39;^online/&#39;, include(&#39;online.urls&#39;, namespace=&quot;online&quot;)),
             ]</pre>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">9: 在online目录下新建一个urls.py, 添加如下内容：</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">9: 在<span style="color: rgb(255, 0, 0);">online目录下新建一个urls.py</span>, 添加如下内容：</span>
 </p>
 <pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            from django.conf.urls import url
             from online import views
@@ -80,7 +135,7 @@
                 url(r&#39;^index/$&#39;, views.index, name=&#39;index&#39;),    # 登录成功页面网址
             ]</pre>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">10: 接下来是在online/models.py中添加数据库(这里我们只添加用户名和密码):</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">10: 接下来是在<span style="color: rgb(255, 0, 0);">online/models.py</span>中添加数据库(这里我们只添加用户名和密码):</span>
 </p>
 <pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            from __future__ import unicode_literals
             from django.db import models
@@ -95,7 +150,7 @@
                 def __unicode__(self):
                     return self.username</pre>
 <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">&nbsp;11: 最后我们要在视图中添加urls.py对应的函数了online/views.py：</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240);">&nbsp;11: 最后我们要在视图中添加urls.py对应的函数了<span style="color: rgb(255, 0, 0);">online/views.py</span>：</span>
 </p>
 <pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            # coding=utf-8
             from django.shortcuts import render, redirect, render_to_response
