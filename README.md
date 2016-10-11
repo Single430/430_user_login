@@ -71,7 +71,8 @@
             &lt;/form&gt;&lt;br&gt;&lt;a href=&quot;{% url &#39;online:mylogin&#39; %}&quot;&gt;登 陆&lt;/a&gt;
             &lt;/body&gt;&lt;/html&gt;
             
-                  
+            
+            index.html            
             &lt;!DOCTYPE html&gt;
             &lt;html lang=&quot;en&quot;&gt;
             &lt;head&gt;    
@@ -81,9 +82,10 @@
             &lt;h1&gt;welcome {{username}} !&lt;/h1&gt;&lt;br&gt;
             &lt;a href=&quot;{% url &#39;online:logout&#39; %}&quot;&gt;注 销&lt;/a&gt;
             &lt;/body&gt;
-            &lt;/html&gt;       
-                 
-                      
+            &lt;/html&gt;     
+
+
+            login.html           
             &lt;!DOCTYPE html&gt;
             &lt;html lang=&quot;en&quot;&gt;
             &lt;head&gt;    
@@ -100,6 +102,8 @@
              &lt;a href=&quot;{% url &#39;online:account&#39; %}&quot;&gt;注 册&lt;/a&gt;
              &lt;/body&gt;
              &lt;/html&gt;</pre>
+
+            settings.py
 <pre style="background-color:#ffffff;color:#000000;font-family:&#39;DejaVu Sans Mono&#39;;font-size:9.0pt;">            TEMPLATES = [
                 {
                     &#39;BACKEND&#39;: &#39;django.template.backends.django.DjangoTemplates&#39;,
